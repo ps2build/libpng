@@ -1,0 +1,29 @@
+project: libpng
+
+targets:
+  - name: png
+    type: ee_lib
+    sources:
+      - png.c
+      - pngerror.c
+      - pngget.c
+      - pngmem.c
+      - pngpread.c
+      - pngread.c
+      - pngrio.c
+      - pngrtran.c
+      - pngrutil.c
+      - pngset.c
+      - pngtrans.c
+      - pngwio.c
+      - pngwrite.c
+      - pngwtran.c
+      - pngwutil.c
+      # No arm/intel/mips/powerpc/loongarch/riscv SIMD sources - none
+      # apply to the EE's R5900 core, and pngpriv.h's own dispatch is
+      # already conditioned on the relevant __arm__/__SSE2__/etc macros,
+      # so omitting the files (rather than compiling and having them
+      # no-op) matches what a real MIPS build would select anyway.
+    include_dirs:
+      - .
+      - ../zlib

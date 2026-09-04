@@ -1,0 +1,11 @@
+name: png
+origin: port:libpng
+tier: world
+license: libpng-2.0
+
+artifacts:
+  - kind: library
+    target: [ee]
+    include_dirs: [.]
+    headers: [z]
+    lib: lib/libpng.a
