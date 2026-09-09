@@ -154,3 +154,5 @@ pngprefix.h
 /pngunknown
 /pngvalid
 /timepng
+
+/.clangd
